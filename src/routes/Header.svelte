@@ -35,7 +35,7 @@
 	</nav>
 
 	<div class="corner">
-		<a href="https://github.com/sveltejs/kit">
+		<a target="_blank" href="https://github.com/gantrol/tkso">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>

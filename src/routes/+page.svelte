@@ -6,7 +6,7 @@
     let sqlFileInput;
     let db;
     let SQL;
-    let sqlStr = `SELECT 微博id, user_name AS '用户名', 微博正文, 发布时间, 转发数, 评论数 FROM simple_weibo
+    let sqlStr = `SELECT 微博id, user_name AS '用户名', 微博正文, 发布时间, 点赞数, 转发数, 评论数 FROM simple_weibo
                 LEFT JOIN user ON simple_weibo.user_id = user.user_id`;
 
     let weibo_data = [];
