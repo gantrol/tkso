@@ -1,0 +1,19 @@
+section {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*!*align-items: center;*!*/
+    /*flex: 0.6;*/
+}
+
+td[data-key="content"] {
+    /*max-width: 200px;*/
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 4;*/
+    /*overflow: hidden;*/
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
