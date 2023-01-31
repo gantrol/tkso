@@ -6,7 +6,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
+		<a target="_blank" rel="noreferrer" href="https://kit.svelte.dev">
 			<img src={logo} alt="SvelteKit" />
 		</a>
 	</div>
@@ -19,9 +19,6 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">Home</a>
 			</li>
-<!--			<li class:active={$page.url.pathname === '/counter'}>-->
-<!--				<a href="/counter">Counter</a>-->
-<!--			</li>-->
 <!--			<li class:active={$page.url.pathname === '/about'}>-->
 <!--				<a href="/about">About</a>-->
 <!--			</li>-->
@@ -35,7 +32,7 @@
 	</nav>
 
 	<div class="corner">
-		<a target="_blank" href="https://github.com/gantrol/tkso">
+		<a target="_blank" rel="noreferrer" href="https://github.com/gantrol/tkso">
 			<img src={github} alt="GitHub" />
 		</a>
 	</div>

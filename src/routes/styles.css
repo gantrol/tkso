@@ -6,14 +6,12 @@ section {
     /*flex: 0.6;*/
 }
 
-td[data-key="content"] {
-    /*max-width: 200px;*/
-    /*display: -webkit-box;*/
-    /*-webkit-box-orient: vertical;*/
-    /*-webkit-line-clamp: 4;*/
-    /*overflow: hidden;*/
-    display: block;
+.fold {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+}
+
+.line-clamp-2 {
+    -webkit-line-clamp: 2;
 }

@@ -2,6 +2,8 @@
     import { onMount } from 'svelte';
     import initSqlJs from 'sql.js';
     import WeiboTable from "$lib/WeiboTable.svelte";
+
+
     // 赋个默认值 TODO: 正在加载
     let sqlFileInput;
     let db;
@@ -9,6 +11,8 @@
     let sqlStr = `SELECT 微博id, user_name AS '用户名', 微博正文, 发布时间, 点赞数, 转发数, 评论数 FROM simple_weibo
                 LEFT JOIN user ON simple_weibo.user_id = user.user_id`;
 
+    // up: 对接open ai 接口
+    // deta: api key 移动到其他地方
     let weibo_data = [];
     onMount(async () => {
         SQL = await initSqlJs({
@@ -51,6 +55,7 @@
             }
         })
     }
+
 </script>
 
 <svelte:head>
@@ -59,8 +64,10 @@
 </svelte:head>
 
 <section>
-    <label for="sqlFileInput" >可自选数据库</label>
-    <input id="sqlFileInput" type="file" bind:this={sqlFileInput} on:change={upload}/>
+    <div id="db_input">
+        <label for="sqlFileInput" >可自选数据库</label>
+        <input id="sqlFileInput" type="file" bind:this={sqlFileInput} on:change={upload}/>
+    </div>
     <WeiboTable bind:weibo_data={weibo_data}/>
 </section>
 

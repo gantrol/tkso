@@ -2,11 +2,12 @@
 
 ## 功能
 
+- up: 域名重定向？
+- deta: file reload?
 - feat: SQL抽出参数
-- feat: content内容过长的处理，详情页？还是popup？
 - deta: 进而，有iframe embed的微博？
 
-- feat: 可否对接chatgpt？
+- feat: 可否对接chatgpt 或 http://perplexity.ai/？
 - feat: 复制键
 
 
