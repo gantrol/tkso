@@ -3,7 +3,6 @@
 
     export let weibo_data
     // map
-    // TODO: 正则表达式搜索选项(default?)
     // deta: 可以考虑将用户名的filter改为单多选
     // deta: 去除这个框架
     // https://github.com/muonw/powertable/blob/main/src/routes/examples/example8/+page.svelte#L62
@@ -11,7 +10,7 @@
         return {
             id: `<a target="_blank" href="https://weibo.cn/comment/${item.id}">${item.id}</a>`,
             username: item.username,
-            content: `<div class="fold line-clamp-2"">${item.content}</div>`,
+            content: `<div class="fold line-clamp-2">${item.content}</div>`,
             publish_time: item.publish_time,
             up_num: item.up_num,
             retweet_num: item.retweet_num,
@@ -45,20 +44,9 @@
         return new Date(v1) < new Date(v2) ? -1 : new Date(v1) > new Date(v2) ? 1 : 0;
     }
 
-    const rowOnClick = (e) => {
-        const target = e.detail.event.target;
-        if (target.getAttribute("class") === 'fold') {
-            target.setAttribute("class", "fold line-clamp-2");
-        } else {
-            target.setAttribute("class", "fold");
-        }
-        console.log(target);
-    }
-
 </script>
 
 <div class="MuonW PowerTable">
     <PowerTable
-            on:rowClicked="{(e) => rowOnClick(e)}"
             {ptInstructs} {ptOptions} {ptData}/>
 </div>

@@ -1,17 +1,13 @@
-section {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*!*align-items: center;*!*/
-    /*flex: 0.6;*/
-}
-
 .fold {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .line-clamp-2 {
+    overflow: hidden;
     -webkit-line-clamp: 2;
+}
+
+.line-clamp-2:hover {
+    -webkit-line-clamp: inherit;
 }
